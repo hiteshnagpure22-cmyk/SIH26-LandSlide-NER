@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NER-SAFE — AI-Based Early Warning & Landslide Risk Monitoring System for North Eastern Region." />
+  <title>NER-SAFE | Landslide Early Warning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="brand" href="#home">
+        <span class="brand-mark">⛰</span>
+        <span>NER-SAFE</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#impact">Impact</a>
+      </div>
+      <a href="#dashboard" class="btn btn-sm">View Demo</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <div class="eyebrow">SMART INDIA HACKATHON 2026 • SIH26001</div>
+          <h1>
+            Predict the hazard.<br/>
+            <span>Protect the people.</span>
+          </h1>
+          <p class="hero-sub">
+            NER-SAFE is an AI-powered geospatial decision-support platform for landslide early warning in Northeast India.
+            It combines rainfall, terrain and historical landslide data to estimate dynamic risk and highlight vulnerable roads and settlements.
+          </p>
+          <div class="hero-actions">
+            <a href="#dashboard" class="btn">Explore Risk Dashboard</a>
+            <a href="#how" class="btn btn-ghost">See How It Works</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>5</strong><span>Risk Levels</span></div>
+            <div><strong>AI + GIS</strong><span>Decision Engine</span></div>
+            <div><strong>24×7</strong><span>Monitoring Ready</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="terrain-card">
+            <svg viewBox="0 0 760 520" role="img" aria-label="Stylized landslide monitoring map">
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#d9ede5"/>
+                  <stop offset="100%" stop-color="#f7fbf8"/>
+                </linearGradient>
+                <linearGradient id="hill" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#21563c"/>
+                  <stop offset="100%" stop-color="#5f8f68"/>
+                </linearGradient>
+              </defs>
+              <rect width="760" height="520" rx="28" fill="url(#sky)"/>
+              <path d="M0 320 C90 260,120 240,205 280 C285 318,330 208,430 225 C535 245,560 145,760 205 L760 520 L0 520Z" fill="#7aa77e"/>
+              <path d="M0 385 C115 320,170 335,255 350 C355 365,405 270,500 285 C605 300,640 230,760 260 L760 520 L0 520Z" fill="url(#hill)"/>
+              <path d="M406 224 C444 258,450 295,432 336 C420 364,415 400,456 438" fill="none" stroke="#c8b08a" stroke-width="36" stroke-linecap="round"/>
+              <path d="M406 224 C444 258,450 295,432 336 C420 364,415 400,456 438" fill="none" stroke="#eddbc0" stroke-width="8" stroke-linecap="round"/>
+              <path d="M115 415 C230 365,320 390,432 336 C545 281,620 308,710 340" fill="none" stroke="#525d58" stroke-width="26" stroke-linecap="round"/>
+              <path d="M115 415 C230 365,320 390,432 336 C545 281,620 308,710 340" fill="none" stroke="#e9ecea" stroke-width="3" stroke-dasharray="18 18"/>
+              <g transform="translate(435,264)">
+                <circle r="47" fill="#dc4d3f" opacity=".16"/>
+                <circle r="30" fill="#dc4d3f"/>
+                <path d="M0 -14 L16 14 H-16 Z" fill="white"/>
+                <rect x="-2.5" y="-7" width="5" height="12" rx="2.5" fill="#dc4d3f"/>
+                <circle cx="0" cy="10" r="2.8" fill="#dc4d3f"/>
+              </g>
+              <g transform="translate(560,320)">
+                <circle r="34" fill="#f0a83f" opacity=".18"/>
+                <circle r="20" fill="#f0a83f"/>
+                <circle r="7" fill="#fff"/>
+              </g>
+              <g transform="translate(276,365)">
+                <circle r="34" fill="#2d7d52" opacity=".18"/>
+                <circle r="20" fill="#2d7d52"/>
+                <circle r="7" fill="#fff"/>
+              </g>
+              <g transform="translate(615,220)">
+                <rect x="-54" y="-23" width="108" height="46" rx="18" fill="#0e2d21"/>
+                <text x="0" y="-2" text-anchor="middle" font-family="Inter" font-size="13" fill="#b8d6c3">LIVE RISK</text>
+                <text x="0" y="14" text-anchor="middle" font-family="Inter" font-weight="800" font-size="18" fill="#fff">CRITICAL</text>
+              </g>
+            </svg>
+
+            <div class="floating-card rainfall">
+              <span class="ficon">🌧</span>
+              <div><small>24h Rainfall</small><strong>128 mm</strong></div>
+            </div>
+            <div class="floating-card risk-score">
+              <span class="dot critical"></span>
+              <div><small>Risk Score</small><strong>86 / 100</strong></div>
+            </div>
+            <div class="floating-card road">
+              <span class="ficon">🛣</span>
+              <div><small>Road Exposure</small><strong>High</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-items">
+        <span>Data ecosystem inspired by</span>
+        <strong>GSI</strong>
+        <strong>ISRO / NRSC</strong>
+        <strong>IMD</strong>
+        <strong>NDMA SACHET</strong>
+        <strong>OpenStreetMap</strong>
+      </div>
+    </section>
+
+    <section class="section container" id="features">
+      <div class="section-head">
+        <span class="eyebrow">CORE CAPABILITIES</span>
+        <h2>From prediction to action.</h2>
+        <p>One integrated workflow for dynamic landslide risk, impact assessment and early warning.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="icon-badge">🧠</div>
+          <h3>AI Risk Prediction</h3>
+          <p>Uses terrain, rainfall, historical landslide and land-cover features to estimate location-specific risk.</p>
+          <span class="tag">XGBoost / Random Forest</span>
+        </article>
+        <article class="feature-card">
+          <div class="icon-badge">🗺️</div>
+          <h3>Dynamic Risk Map</h3>
+          <p>Visualizes Low, Moderate, High, Very High and Critical zones on an interactive geospatial interface.</p>
+          <span class="tag">GIS + Leaflet / Mapbox</span>
+        </article>
+        <article class="feature-card">
+          <div class="icon-badge">🌧️</div>
+          <h3>Rainfall Trigger Engine</h3>
+          <p>Combines recent, cumulative and forecast rainfall to update short-term landslide risk.</p>
+          <span class="tag">Current + Forecast Rainfall</span>
+        </article>
+        <article class="feature-card">
+          <div class="icon-badge">🛣️</div>
+          <h3>Road & Village Impact</h3>
+          <p>Flags vulnerable road corridors and settlements that may face disruption or isolation.</p>
+          <span class="tag">Exposure Analysis</span>
+        </article>
+        <article class="feature-card">
+          <div class="icon-badge">🚨</div>
+          <h3>Action-Oriented Alerts</h3>
+          <p>Transforms risk scores into location-specific warnings with evidence and suggested actions.</p>
+          <span class="tag">Alert + Recommendation</span>
+        </article>
+        <article class="feature-card">
+          <div class="icon-badge">🔎</div>
+          <h3>Explainable AI</h3>
+          <p>Shows the key drivers behind a high-risk prediction—rainfall, slope, susceptibility and event history.</p>
+          <span class="tag">SHAP Explainability</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="how">
+      <div class="container">
+        <div class="section-head compact">
+          <span class="eyebrow">HOW IT WORKS</span>
+          <h2>A clear six-step warning pipeline.</h2>
+        </div>
+
+        <div class="process">
+          <div class="process-step"><span>01</span><b>Collect</b><p>Rainfall, DEM, terrain, landslide inventory and road data.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><span>02</span><b>Process</b><p>Clean, align and engineer geospatial features.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><span>03</span><b>Predict</b><p>Generate susceptibility and trigger-aware risk.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><span>04</span><b>Assess</b><p>Evaluate exposed roads, settlements and facilities.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><span>05</span><b>Warn</b><p>Issue risk level, evidence and recommended action.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><span>06</span><b>Review</b><p>Replay historical events and improve performance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="dashboard">
+      <div class="dashboard-intro">
+        <div>
+          <span class="eyebrow">INTERACTIVE DEMO</span>
+          <h2>NER Command Center</h2>
+          <p>Select a location to see a simulated risk state. This prototype interaction is for hackathon demonstration only.</p>
+        </div>
+        <div class="legend">
+          <span><i class="l low"></i> Low</span>
+          <span><i class="l moderate"></i> Moderate</span>
+          <span><i class="l high"></i> High</span>
+          <span><i class="l critical"></i> Critical</span>
+        </div>
+      </div>
+
+      <div class="dashboard-shell">
+        <aside class="dash-side">
+          <div class="dash-brand"><span>⛰</span> NER-SAFE</div>
+          <a class="active">Overview</a>
+          <a>Risk Map</a>
+          <a>Alerts</a>
+          <a>Road Impact</a>
+          <a>Historical Replay</a>
+          <a>Reports</a>
+          <div class="side-note">
+            <small>System status</small>
+            <strong><span class="online-dot"></span> Operational</strong>
+          </div>
+        </aside>
+
+        <div class="dash-main">
+          <div class="dash-toolbar">
+            <div>
+              <small>LOCATION</small>
+              <select id="districtSelect">
+                <option value="tawang">Tawang, Arunachal Pradesh</option>
+                <option value="east-khasi">East Khasi Hills, Meghalaya</option>
+                <option value="aizawl">Aizawl, Mizoram</option>
+                <option value="sikkim">North Sikkim, Sikkim</option>
+              </select>
+            </div>
+            <button class="btn btn-sm" id="replayBtn">▶ Replay Rainfall Event</button>
+          </div>
+
+          <div class="kpi-grid">
+            <div class="kpi"><span>Risk Score</span><strong id="riskScore">82</strong><small id="riskClass">Very High</small></div>
+            <div class="kpi"><span>24h Rainfall</span><strong id="rainfall">118 mm</strong><small>Elevated</small></div>
+            <div class="kpi"><span>Road Exposure</span><strong id="roadExposure">High</strong><small>2 corridors flagged</small></div>
+            <div class="kpi"><span>Alert Status</span><strong id="alertStatus">Active</strong><small>Authority review</small></div>
+          </div>
+
+          <div class="dash-grid">
+            <div class="map-card">
+              <div class="map-head"><b>Dynamic Risk Map</b><span id="mapStatus">VERY HIGH RISK</span></div>
+              <div class="mini-map">
+                <svg viewBox="0 0 760 440">
+                  <rect width="760" height="440" fill="#e8efe9"/>
+                  <path d="M0 330 C85 230,170 285,250 190 C330 96,440 210,522 118 C612 20,690 82,760 50 L760 440 L0 440Z" fill="#c0d7c3"/>
+                  <path d="M0 390 C120 315,210 342,320 254 C420 175,500 250,760 170 L760 440 L0 440Z" fill="#83ad89"/>
+                  <path d="M80 370 C180 325,276 345,360 276 C450 205,555 218,684 175" stroke="#63716b" stroke-width="22" fill="none"/>
+                  <path d="M80 370 C180 325,276 345,360 276 C450 205,555 218,684 175" stroke="#fff" stroke-width="2" stroke-dasharray="14 12" fill="none"/>
+                  <path d="M310 210 C380 188,448 216,505 252 C470 294,405 318,328 300 C286 280,275 238,310 210Z" fill="#d84a3c" opacity=".84"/>
+                  <path d="M245 165 C300 128,348 152,372 204 C332 226,286 231,250 204 C230 192,228 178,245 165Z" fill="#f0a83f" opacity=".82"/>
+                  <circle cx="420" cy="265" r="9" fill="#fff"/><circle cx="420" cy="265" r="18" fill="none" stroke="#fff" stroke-width="3"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="alert-card">
+              <div class="alert-title">⚠ Active Warning</div>
+              <h3 id="alertTitle">Very High Landslide Risk</h3>
+              <p id="alertText">Heavy rainfall combined with steep terrain and historical landslide density is driving the current risk.</p>
+              <div class="driver">
+                <span>Rainfall trigger</span><b id="driver1">High</b>
+              </div>
+              <div class="driver">
+                <span>Slope susceptibility</span><b id="driver2">High</b>
+              </div>
+              <div class="driver">
+                <span>Historical events</span><b id="driver3">Medium</b>
+              </div>
+              <div class="recommendation">
+                <small>RECOMMENDED ACTION</small>
+                <strong id="actionText">Inspect vulnerable slope and prepare traffic restriction.</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="trend-card">
+            <div class="trend-head"><b>Risk Trend — Last 7 Days</b><span>Simulated demonstration</span></div>
+            <div class="bars" id="trendBars">
+              <i style="height:24%"></i><i style="height:31%"></i><i style="height:38%"></i><i style="height:44%"></i><i style="height:56%"></i><i style="height:68%"></i><i style="height:82%"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="impact">
+      <div class="container impact-grid">
+        <div>
+          <span class="eyebrow light">WHY NER-SAFE</span>
+          <h2>From reactive response to preventive readiness.</h2>
+          <p>Instead of waiting for a landslide report, NER-SAFE helps authorities understand where risk is rising, what may be affected and what action should be prepared.</p>
+          <a href="#home" class="btn btn-light">Back to Top</a>
+        </div>
+        <div class="impact-cards">
+          <div><strong>Earlier</strong><span>risk awareness</span></div>
+          <div><strong>Smarter</strong><span>road inspection priority</span></div>
+          <div><strong>Safer</strong><span>remote communities</span></div>
+          <div><strong>Better</strong><span>decision support</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>NER-SAFE</strong>
+        <p>AI-Based Early Warning & Landslide Risk Monitoring System</p>
+      </div>
+      <div class="footer-note">SIH 2026 • Prototype Concept</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
